@@ -26,6 +26,9 @@ Estrutura da aplicação:
   - Função para retornar a data no padrão requisitado pela API como parâmetrona consulta
 - Foram utilizados vários componentes do Angular Material (Table, DatePicker, Card, Icon, Input, etc)
 
+A aplicação foi colocada em produção utilizando a plataforma Vercel e pode ser acessada através do link:
+https://aceleracao-avanade-covid19.vercel.app/covid-info
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
