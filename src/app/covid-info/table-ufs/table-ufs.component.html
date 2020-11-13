@@ -1,0 +1,44 @@
+<mat-card class="card-loading" *ngIf="isLoading" [@fadeAnimation]="'in'">
+  <mat-spinner [diameter]="30"></mat-spinner>
+  <h2>Carregando dados...</h2>
+</mat-card>
+<mat-card *ngIf="!isLoading && !dataLoaded" class="card-loading">
+  <h1>Selecione uma data e clique em <strong>Consultar</strong></h1>
+</mat-card>
+<div class="container mat-elevation-z8" [hidden]="isLoading || !dataLoaded">
+
+  <table mat-table class="full-width-table" matSort aria-label="Elements">
+    <!-- Estado -->
+    <ng-container matColumnDef="state">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Estado</th>
+      <td mat-cell class="mat-cell" *matCellDef="let row">{{row.state}}</td>
+    </ng-container>
+
+    <!-- Total de casos -->
+    <ng-container matColumnDef="cases">
+      <th mat-header-cell class="mat-header-cell-align-right" *matHeaderCellDef mat-sort-header>Total de Casos</th>
+      <td mat-cell class="mat-cell mat-cell-align-right" *matCellDef="let row">{{row.cases | formatNumber}}</td>
+    </ng-container>
+
+    <!-- Total de mortes -->
+    <ng-container matColumnDef="deaths">
+      <th mat-header-cell class="mat-header-cell-align-right" *matHeaderCellDef mat-sort-header>Mortes</th>
+      <td mat-cell class="mat-cell mat-cell-align-right" *matCellDef="let row">{{row.deaths | formatNumber}}</td>
+    </ng-container>
+
+    <!-- Total de suspeitos -->
+    <ng-container matColumnDef="suspects">
+      <th mat-header-cell class="mat-header-cell-align-right" *matHeaderCellDef mat-sort-header>Suspeitos</th>
+      <td mat-cell class="mat-cell mat-cell-align-right" *matCellDef="let row">{{row.suspects | formatNumber}}</td>
+    </ng-container>
+
+    <!-- Total de descartados -->
+    <ng-container matColumnDef="refuses">
+      <th mat-header-cell class="mat-header-cell-align-right" *matHeaderCellDef mat-sort-header>Descartados</th>
+      <td mat-cell class="mat-cell mat-cell-align-right" *matCellDef="let row">{{row.refuses | formatNumber}}</td>
+    </ng-container>
+
+    <tr mat-header-row class="mat-header-row" *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row class="mat-row" *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

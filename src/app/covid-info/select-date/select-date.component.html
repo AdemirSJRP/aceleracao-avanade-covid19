@@ -1,0 +1,13 @@
+<mat-card>
+  <form [formGroup]="form">
+    <mat-form-field color="accent" appearance="fill">
+      <mat-label>Selecione a data que deseja consultar:</mat-label>
+      <input matInput [matDatepicker]="datePicker" formControlName="dateInput">
+      <mat-datepicker-toggle matSuffix [for]="datePicker"></mat-datepicker-toggle>
+      <mat-datepicker #datePicker color="primary"></mat-datepicker>
+    </mat-form-field>
+    <button mat-raised-button color="primary" aria-label="Confirmar a data" (click)="onDateSelected()">
+      Consultar
+    </button>
+  </form>
+</mat-card>

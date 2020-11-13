@@ -1,0 +1,7 @@
+<div class="container">
+  <cov-select-date [date]="date" (dateChanged)="loadData($event)"></cov-select-date>
+  <div class="container-data">
+    <cov-table-ufs #compTableUfs></cov-table-ufs>
+    <cov-total-brasil *ngIf="hasData$ | async"></cov-total-brasil>
+  </div>
+</div>

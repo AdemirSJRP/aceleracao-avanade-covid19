@@ -1,0 +1,45 @@
+.container {
+    min-width: 250px;
+    margin-left: 60px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 100%;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-title {
+    font-size: 22px;
+}
+
+.card-info {
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 40px;
+}
+
+.card-confirmados {
+    background-color: cadetblue;
+}
+
+.card-suspeitos {
+    background-color: bisque;
+}
+
+.card-descartados {
+    background-color: aquamarine;
+}
+
+.card-mortes {
+    background-color: firebrick;
+}

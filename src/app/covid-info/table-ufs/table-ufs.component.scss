@@ -1,0 +1,54 @@
+.container {
+  flex: 1;
+  min-width: 600px;
+
+  background-color: yellow;
+}
+
+.card-loading {
+  flex: 1;
+  min-width: 600px;
+  min-height: 50px;
+  margin-bottom: 20px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    margin-left: 20px;
+  }
+}
+
+.full-width-table {
+  width: 100%;
+}
+
+.mat-row {
+  height: 30px;
+}
+
+.mat-header-row {
+  background-color: rgb(146, 184, 253, 0.5);
+  height: 40px;
+}
+
+.mat-header-cell {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+:host ::ng-deep .mat-header-cell-align-right>.mat-sort-header-container {
+  margin-right: -17px;
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.mat-cell {
+  font-size: 12px;
+}
+
+.mat-cell-align-right {
+  text-align: right !important;
+}

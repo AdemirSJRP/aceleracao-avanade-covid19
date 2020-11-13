@@ -1,0 +1,21 @@
+<ng-container *ngIf="data$ | async as data">
+  <div class="container">
+    <h1>Total Geral do Brasil</h1>
+    <mat-card class="card card-confirmados">
+      <div class="card-title">Casos</div>
+      <div class="card-info">{{data.cases | formatNumber}}</div>
+    </mat-card>
+    <mat-card class="card card-suspeitos">
+      <div class="card-title">Suspeitos</div>
+      <div class="card-info">{{data.suspects | formatNumber}}</div>
+    </mat-card>
+    <mat-card class="card card-descartados">
+      <div class="card-title">Descartados</div>
+      <div class="card-info">{{data.refuses | formatNumber}}</div>
+    </mat-card>
+    <mat-card class="card card-mortes">
+      <div class="card-title">Mortes</div>
+      <div class="card-info">{{data.deaths | formatNumber}}</div>
+    </mat-card>
+  </div>
+</ng-container>
