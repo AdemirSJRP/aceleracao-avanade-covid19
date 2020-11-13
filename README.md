@@ -15,9 +15,9 @@ Estrutura da aplicação:
 - No componente AppComponent foi desenvolvido todo o layout da aplicação com header, conteúdo (onde foi inserida a rota) e rodapé.
 - No módulo CovidInfoModule foi definida a rota padrão carregada no router através de lazy loading e seus componentes.
 - O componente principal do módulo é o cov-covid-info que contém 3 componentes filhos:
-  - cov-select-date: Componente onde o usuário seleciona a data que deseja consultar
-  - cov-table-ufs: Componente que contém uma tabela onde é feito o corregamento dos dados através da data selecionada
-  - cov-total-brasil: Componente que exibe os cards com os totais somados (todo o Brasil) da data selecionada
+  - cov-select-date: Componente onde o usuário seleciona a data que deseja consultar e retorna essa data através de um output que aciona o método que carrega os dados da API no componente cov-table-ufs
+  - cov-table-ufs: Componente que contém uma tabela onde é feito o carregamento e exibição dos dados através da data selecionada utilizando DataSource para o carregamento/ordenação dos dados.
+  - cov-total-brasil: Componente que exibe os cards com os totais somados (todo o Brasil) da data selecionada recebendo as informações do serviço CovidService
 - Para o carregamento dos dados da API foi criado o serviço CovidService utilizando httpClient contendo alguns métodos observable que são consumidos pelos outros componentes para atualização dos dados utilizando Subject e BehaviorSubject
 - A pasta Shared contém:
   - Módulo Shared configurando os módulos compartilhados pelos outros módulos da aplicação.
