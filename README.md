@@ -5,13 +5,15 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Informações
 
 Essa aplicação foi desenvolvida para entrega do desafio da Aceleração Avanade Global Dev #2.
+
 A idéia dessa aplicação é exibir informações sobre os números totais da Covid-19 no Brasil na data selecionada pelo usuário.
+
 Essas informações são carregadas através da API pública Covid19 Brazil API (https://covid19-brazil-api-docs.now.sh/)
 
 Estrutura da aplicação:
 
 - No componente AppComponent foi desenvolvido todo o layout da aplicação com header, conteúdo (onde foi inserida a rota) e rodapé.
-- No módulo CovidInfoModule foi definida a rota padrão carregada no router e seus componentes.
+- No módulo CovidInfoModule foi definida a rota padrão carregada no router através de lazy loading e seus componentes.
 - O componente principal do módulo é o cov-covid-info que contém 3 componentes filhos:
   - cov-select-date: Componente onde o usuário seleciona a data que deseja consultar
   - cov-table-ufs: Componente que contém uma tabela onde é feito o corregamento dos dados através da data selecionada
